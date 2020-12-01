@@ -88,7 +88,7 @@ def task2_twopointer(expenses, target_sum):
     # Similar to task1_twopointer
     expenses.sort()
     expenses_len = len(expenses)
-    for i in range(expenses_len - 1):
+    for i in range(expenses_len - 1):  # Fixing each number as we use TPA
         l_index = i + 1
         r_index = expenses_len - 1
         while l_index < r_index:
