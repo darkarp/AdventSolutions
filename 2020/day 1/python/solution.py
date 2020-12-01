@@ -20,7 +20,8 @@ def timeit(method):
 
 @timeit
 def task1_naive(expenses, target_sum):
-    # Nested loop solution O(n^2)
+    # Nested loop solution
+    # O(n^2)
     for i in expenses:
         for j in expenses:
             if j + i == target_sum:
@@ -30,6 +31,8 @@ def task1_naive(expenses, target_sum):
 
 @timeit
 def task1_hashtable(expenses, target_sum):
+    # Using hashmaps for efficiency
+    # O(N)
     hashtable = set()  # create a hashtable
     for expense in expenses:
         check = target_sum-expense
@@ -43,6 +46,8 @@ def task1_hashtable(expenses, target_sum):
 @timeit
 def task1_twopointer(expenses, target_sum):
     # Two Pointer Algorithm: from both ends to center
+    # This is going to depend on the sorting algorithmsel
+    # O(n log n)
     expenses.sort()  # sorts the list so we can use TPA
     i = 0  # left index
     j = len(expenses) - 1  # right index
@@ -62,6 +67,7 @@ def task1_twopointer(expenses, target_sum):
 @timeit
 def task2_naive(expenses, target_sum):
     # Nested loop solution
+    # O(n^3)
     for i in expenses:
         for j in expenses:
             for z in expenses:
@@ -73,6 +79,7 @@ def task2_naive(expenses, target_sum):
 @timeit
 def task2_hashtable(expenses, target_sum):
     # Hashtable implementation, similar to task1_hasktable
+    # O(N^2)
     expenses_len = len(expenses)
     for i in range(expenses_len):
         hashtable = set()
@@ -86,6 +93,7 @@ def task2_hashtable(expenses, target_sum):
 @timeit
 def task2_twopointer(expenses, target_sum):
     # Similar to task1_twopointer
+    # O(N^2)
     expenses.sort()
     expenses_len = len(expenses)
     for i in range(expenses_len - 1):  # Fixing each number as we use TPA
