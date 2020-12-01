@@ -1,20 +1,7 @@
-'''
-Currency: stars
-Need to find 50 stars to pay deposit.
-Get all 50 before December 25th
-Each puzzle grants one star
-
-
-Problem:
-a + b = 2020
-c = a * b
-
-'''
 import time
 
+
 # Benchmark decorator
-
-
 def timeit(method):
     def timed(*args, **kw):
         ts = time.time()
