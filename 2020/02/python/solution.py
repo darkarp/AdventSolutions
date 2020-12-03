@@ -7,7 +7,7 @@ def task1_naive(password_list):
         min_letter, max_letter = (int(number)
                                   for number in pass_range.split("-"))
         letter_count = password.count(letter_check)
-        if letter_count >= min_letter and letter_count <= max_letter:
+        if max_letter >= letter_count >= min_letter:
             pass_valid += 1
     return pass_valid
 
@@ -20,7 +20,9 @@ def task2_naive(password_list):
             item.strip().replace(":", "") for item in line.split(" "))
         min_letter, max_letter = (int(number)
                                   for number in pass_range.split("-"))
-        if (password[min_letter-1] == letter_check) ^ (password[max_letter-1] == letter_check):
+        condition_min = password[min_letter-1] == letter_check
+        condition_max = password[max_letter-1] == letter_check
+        if condition_min ^ condition_max:
             valid_passwords += 1
     return valid_passwords
 
