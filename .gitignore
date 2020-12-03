@@ -138,4 +138,4 @@ dmypy.json
 cython_debug/
 
 # Mac stuff
-.DS_STORE/
+.DS_Store/
