@@ -1,4 +1,4 @@
-# Advent of Code solutions
+# Advent of Code solutions - [Join here](https://adventofcode.com/)
 
 Here is where I'll be posting my solutions to advent of code.
 I'll try to post them every day as I do them and in different languages at some point.
