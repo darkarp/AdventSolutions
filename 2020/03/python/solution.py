@@ -13,9 +13,6 @@ def task1_naive(map_input, up_slope, right_slope):
     return trees
 
 
-
-
-
 def task1_one_line():
     # One line solve
     from math import prod;print(prod([sum(row[i*3%len(row.strip())]=="#"for i,row in enumerate(open('map.txt','r')))]))
