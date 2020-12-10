@@ -59,7 +59,7 @@ class Interpreter:
         return print("[-] Couldn't find corruption!")
 
 
-def extract_input(filename: str = "input.txt") -> list[str]:
+def extract_input(filename: str = "instructions.txt") -> list[str]:
     return [line.strip() for line in open(filename)]
 
 
