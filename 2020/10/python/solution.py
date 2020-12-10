@@ -40,7 +40,7 @@ def count_differences(outlet_list: set, outlet_charge: int) -> int:
 
 def count_arrangements(outlet_list: set, outlet_charge: int) -> int:
     # Count total paths based on number of posibilities of each number
-    # Credits to Francisco Traquete for heling me out with this one.
+    # Credits to Francisco Traquete for helping me out with this one.
     # https://github.com/Francisco-T
     # My previous solution was very time and space inefficient
     diff_dict = {outlet_charge: 1}
